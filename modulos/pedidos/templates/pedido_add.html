@@ -11,15 +11,23 @@
     {% endif %}
     <form action="/pedidos/save" method="post">
         <div>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome">
+            <label for="nome">Nome: </label>
+            <select id="usuario_id" name="nome">
+                {% for u in usuarios %}
+                    <option value="{{u.id}}">{{u.nome}}</option>
+                {% endfor %}
+              </select>
         </div>
         <div>
-            <label for="pizza">Pizza:</label>
-            <input type="text" name="pizza" id="pizza">
+            <label for="sabor">Sabor Pizza: </label>
+            <select id="pizza_id" name="sabor">
+                {% for p in pizzas %}
+                    <option value="{{p.id}}">{{p.sabor}}</option>
+                {% endfor %}
+            </select>
         </div>
         <div>
-            <label for="data">Data:</label>
+            <label for="data">Data: </label>
             <input type="date" name="data" id="data">
         </div>
         <button type="submit">Salvar</button>
