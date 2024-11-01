@@ -33,8 +33,8 @@ class Pizza(db.Model):
 class Pedido(db.Model):
     __tablename__ = 'pedido'
     id = db.Column(db.Integer, primary_key = True)
-    usuario_id = db.Column(db.Integer. db.ForeignKey('usuario.id'))
-    pizza_id = db.Column(db.Integer. db.ForeignKey('pizza.id'))
+    usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'))
+    pizza_id = db.Column(db.Integer, db.ForeignKey('pizza.id'))
     data = db.Column(db.Date)
 
     usuario = db.relationship('Usuario', foreign_keys=usuario_id)
