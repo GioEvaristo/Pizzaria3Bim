@@ -13,6 +13,8 @@
     --secondary: #5ad3d3;
     --gray: rgb(217, 208, 208);
     --white: white;
+    --blue: #305ffa;
+    --green: #26932f;
 }
 
 header{
@@ -21,6 +23,11 @@ header{
     align-items: center;
     height: 5rem;
     background-color: var(--primary);
+    
+}
+
+header img{
+    height: 5rem;
 }
 
 header h1{
@@ -29,6 +36,20 @@ header h1{
     margin: 0.5rem;
     font-family: 'Mountains of Christmas';
     text-shadow: -2px 1px black;
+    
+}
+
+h1.inicio{
+    display: flex;
+    font-size: 6rem;
+    color: var(--blue) ;
+    font-family: 'Mountains of Christmas';
+    text-shadow: 5px 3px rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    padding-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav div{
@@ -37,7 +58,7 @@ nav div{
     background-image: radial-gradient(var(--secondary), black);
     justify-content: space-around;
     align-items: center;
-    text-shadow: -1px 1px var(--gray);
+    text-shadow: -1px 1px black;
 }
 
 nav div a{
@@ -46,14 +67,14 @@ nav div a{
     text-decoration: none;
     align-items: center;
     margin: 2rem;
-    color: var(--primary);
+    color: var(--gray);
 }
+
 
 main {
     min-height: calc(100vh - 11rem);
-    background-color: rgb(255, 194, 109);
+    background-color: var(--green);
     background-image: url(/static/img/stevepizza.webp);
-    text-shadow: -1px 1px black;
 }
 
 a, input{
@@ -61,7 +82,7 @@ a, input{
     justify-content: center;
     font-size: 2rem;
     text-decoration: none;
-    color: var(--white);
+    color: rgb(255, 0, 0);
 }
 
 table, tr, td, th{
@@ -78,9 +99,6 @@ table, tr, td, th{
 
 form{
     padding-top: 9rem;
-}
-
-fieldset{
     border: 3px solid var(--purple);
     border-collapse: collapse;
     background-image: radial-gradient(#ff8ecc, rgba(0, 0, 0, 0.164) );
@@ -95,7 +113,8 @@ fieldset{
     flex-direction: column;
 }
 
-fieldset button{
+
+button{
     margin-top: 1rem;
     margin-left: 20rem;
     height: 5rem;
@@ -111,7 +130,7 @@ fieldset button{
     font-size: 2rem;
 }
 
-fieldset input{
+input{
     font-size: 2rem;
     height: 3rem;
     width: 28rem;
@@ -151,12 +170,13 @@ div.index{
 }
 
 footer{
-    font-size: smaller;
+    font-size: 10px;
     padding-right: 1rem;
     height: 3rem;
     display: flex;
     align-items: center;
-    background-image: radial-gradient(#FF7BC4, rgba(0, 0, 0, 0.17) );
+    background-image: radial-gradient(var(--secondary), black);
     justify-content: end;
-    color: var(--purple);
+    color: var(--white);
+    
 }

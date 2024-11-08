@@ -12,15 +12,17 @@
     <form action="/pedidos/save" method="post">
         <div>
             <label for="nome">Nome: </label>
-            <select id="usuario_id" name="nome">
+            <select id="nome" name="usuario_id" required>
+                <option value=" "></option>
                 {% for u in usuarios %}
                     <option value="{{u.id}}">{{u.nome}}</option>
                 {% endfor %}
-              </select>
+            </select>
         </div>
         <div>
-            <label for="sabor">Sabor Pizza: </label>
-            <select id="pizza_id" name="sabor">
+            <label for="pizza">Sabor Pizza: </label>
+            <select id="pizza" name="pizza_id" required>
+                <option value=" "></option>
                 {% for p in pizzas %}
                     <option value="{{p.id}}">{{p.sabor}}</option>
                 {% endfor %}
@@ -28,7 +30,7 @@
         </div>
         <div>
             <label for="data">Data: </label>
-            <input type="date" name="data" id="data">
+            <input type="date" name="data" id="data" required>
         </div>
         <button type="submit">Salvar</button>
     </form>

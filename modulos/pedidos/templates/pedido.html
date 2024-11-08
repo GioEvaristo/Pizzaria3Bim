@@ -18,11 +18,11 @@
             <th>Pizza</th>
             <th>Data</th>
         </tr>
-        {% for pe in pedidos %}
+        {% for p in pedidos %}
         <tr>
-            <td>{{pe.usuario.nome}}</td>
-            <td>{{pe.pizza.sabor}}</td>
-            <td>{{pe.data}}</td>
+            <td>{{p.usuario.nome}}</td>
+            <td>{{p.pizza.sabor}}</td>
+            <td>{{p.data}}</td>
         </tr>
         {% endfor %}
     </table>
